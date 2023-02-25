@@ -1,0 +1,287 @@
+html{
+    scroll-behavior: smooth;
+    min-height: 100%;
+    background-image: url(1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+body{
+    margin:0;
+    padding:0;
+    font-family: consolas, verdana;
+    overflow-x: hidden;
+    text-align:justify;
+
+}
+
+input[type="checkbox"]
+{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100000;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.icon{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100001;
+    background: #000;
+    pointer-events:none;
+}
+
+.icon:before{
+    content: 'close';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+input[type="checkbox"]:checked ~ .icon:before{
+    content:'menu';
+}
+
+ul{
+    position:fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100vh;
+    background: #000;
+    transition: 0.5s;
+    z-index: 100000;
+    overflow-y: auto;
+}
+
+input[type="checkbox"]:checked ~ ul{
+    left: -300px;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    display: block;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+ul li a:hover{
+    transform: translateX(10px);
+    color: #ccaa66;
+}
+
+section{
+    position: relative;
+    left: 300px;
+    padding: 100px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ section{
+    left: 0;
+
+}
+
+section h2{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+
+}
+
+
+.button{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: #ccaa66;
+    border: 2px solid  #ffffcc;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button:hover{
+    background: transparent;
+    border-color: #ccaa66;
+    color: #ccaa66;
+
+}
+
+
+
+#menu h1{
+    font-size: 50px;
+    margin-left: 100px;
+    color: #ccaa66;
+    text-shadow: 2px 2px 4px #ffffcc;
+
+}
+
+#menu {
+    color: white;
+
+}
+
+#menu .table .category{
+    font-size: 20px;
+    color: #ffffcc;
+    text-align: left;
+
+}
+
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+#home{
+    color: #ffffff;
+    font-size: 17px;
+}
+
+#home h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #787878;
+}
+
+#reviews {
+    color: #ffffff ;
+    font-size: 20px
+}
+#reviews h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #ffffcc;
+}
+
+#jobs {
+    color:#ffffff ;
+    font-size: 20px;
+}
+#jobs h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #ffffcc;
+}
+
+#gallery {
+    color:white ;
+    font-size: 20px;
+}
+#gallery h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #ffffcc;
+}
+
+#contact {
+    color:white ;
+    font-size: 20px;
+}
+#contact h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #ffffcc;
+}
+
+#music {
+    color:white ;
+    font-size: 20px;
+}
+#music h1{
+    color: #ccaa66;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #ffffcc;
+}
+
+
+
+.align {
+    float: right;
+    width: 33.33%;
+    padding: 5px;
+
+}
+
+
+.job::after {
+    clear: both;
+    display: table;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#footer {
+    color:white ;
+    font-size: 20px;
+    font-style: italic;
+
+}
